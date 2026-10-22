@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Lab Assignment 3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div>
+            <h1>Frontend Lab Assignment 3</h1>
+            <p>JavaScript Practice Projects</p>
+        </div>
+        <button id="themeToggle" class="theme-btn" type="button">
+            🌙 Dark Mode
+        </button>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>1. BMI Calculator</h2>
+            <p>Enter your height and weight to calculate your BMI.</p>
+
+            <form id="bmiForm">
+                <label for="height">Height (cm)</label>
+                <input type="number" id="height" min="1"
+                    max="300" step="any" placeholder="e.g. 170" required>
+
+                <label for="weight">Weight (kg)</label>
+                <input type="number" id="weight" min="1"
+                    max="500" step="any" placeholder="e.g. 65" required>
+
+                <button type="submit">Calculate BMI</button>
+            </form>
+
+            <p id="bmiResult" class="result" aria-live="polite"></p>
+        </section>
+
+        <section class="card">
+            <h2>2. Signup Form</h2>
+            <p>Create an account using the form below.</p>
+
+            <form id="signupForm">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" minlength="2"
+                    maxlength="60" placeholder="Enter your name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email"
+                    placeholder="example@email.com" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" minlength="8"
+                    placeholder="At least 8 characters" required>
+
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword"
+                    placeholder="Re-enter your password" required>
+
+                <button type="submit">Sign Up</button>
+            </form>
+
+            <p id="signupResult" class="result" aria-live="polite"></p>
+        </section>
+
+        <section class="card">
+            <h2>3. Theme Changer</h2>
+            <p>Switch between light and dark themes using the button
+                in the top-right corner.</p>
+            <p id="themeStatus" class="result" aria-live="polite">
+                Current theme: Light
+            </p>
+        </section>
+
+        <section class="card clock-card">
+            <h2>4. Digital Clock</h2>
+            <p>Your current local time</p>
+            <div id="clock" class="clock" aria-live="off">00:00:00</div>
+            <p id="clockDate"></p>
+        </section>
+
+        <section class="card">
+            <h2>5. To-Do List</h2>
+            <p>Add tasks, mark them complete, or delete them.</p>
+
+            <form id="todoForm" class="todo-form">
+                <label for="taskInput">New Task</label>
+                <div class="todo-input-row">
+                    <input type="text" id="taskInput"
+                        placeholder="Enter a task..." maxlength="200" required>
+                    <button type="submit">Add</button>
+                </div>
+            </form>
+
+            <p id="todoCount" aria-live="polite">0 tasks remaining</p>
+            <ul id="taskList" class="task-list"></ul>
+
+            <button id="clearCompleted" class="secondary-btn" type="button">
+                Clear Completed Tasks
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Frontend Lab Assignment 3 | HTML, CSS & JavaScript</p>
+    </footer>
+</body>
+</html>
